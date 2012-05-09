@@ -1,0 +1,10 @@
+<h1>Multiple Matches Found!</h1>
+<p>Here are the results for your show.</p>
+
+<ul>
+  <% @shows.each do |show| %>
+    <li>
+      <%= link_to show.name, show %>
+    </li>
+  <% end %>
+</ul>

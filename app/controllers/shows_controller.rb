@@ -53,11 +53,18 @@ class ShowsController < ApplicationController
 		@search = params[:name]
 		
 		if !@search.nil?
-			@result = Show.select(:id).where("upper(name) = ?", @search.upcase).map(&:id)
+			@result = Show.select(:id).where("upper(name) LIKE ?", "%"+@search.upcase+"%").map(&:id)
 			if @result.empty?
 				render 'noresult'
-			else
-				redirect_to :action => "show", :id => @result
+			elsif @result.count == 1
+			  redirect_to :action => "show", :id => @result
+			else 
+			  @shows = []
+			  @matches = []
+	      @result.each do |match|		  
+  			  @shows << Show.find(match)
+  			end
+				render 'matches'
 			end
 		end
 	end
