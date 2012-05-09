@@ -21,8 +21,7 @@
 + Added a search function to shows_controller.rb
 + New files: /app/views/shows search.html.erb and noresult.html.erb
 
-If you have ideas to make it better, please let me know or by all means
-make some changes.
++ Partial matches are now working correctly (NOT PUSHED TO HEROKU) - Mike Robertson (May 9, 2AM)
 
 #####Commit notes: (Apr 16 2:30a.m. - Mike Romain)
 ######Figured out Delayed_Job Gem
