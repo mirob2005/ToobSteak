@@ -60,7 +60,6 @@ class ShowsController < ApplicationController
 			  redirect_to :action => "show", :id => @result
 			else 
 			  @shows = []
-			  @matches = []
 	      @result.each do |match|		  
   			  @shows << Show.find(match)
   			end
