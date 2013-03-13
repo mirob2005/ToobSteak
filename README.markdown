@@ -1,3 +1,5 @@
+New Copy of the original repo made on 3/12/13
+
 ###http://toobsteak.heroku.com/
 #### CPSC473 Spring 2012
 ##### Team 1 - require 'rails'
